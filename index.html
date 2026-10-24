@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3f6fb">
+  <title>Contact Us | Northstar Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="contact-card" aria-labelledby="page-title">
+      <div class="intro">
+        <div class="brand-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h1 id="page-title">We'd love to hear from you.</h1>
+        <p class="description">Have a question or an idea? Send us a message and we'll get back to you soon.</p>
+        <div class="reply-note">
+          <span class="reply-dot" aria-hidden="true"></span>
+          Usually replies within one business day
+        </div>
+      </div>
+
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input
+            id="name"
+            name="from_name"
+            type="text"
+            autocomplete="name"
+            placeholder="Jane Smith"
+            maxlength="100"
+            required
+            aria-describedby="name-error"
+          >
+          <span class="field-error" id="name-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="from_email"
+            type="email"
+            autocomplete="email"
+            placeholder="jane@example.com"
+            maxlength="254"
+            required
+            aria-describedby="email-error"
+          >
+          <span class="field-error" id="email-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input
+            id="subject"
+            name="subject"
+            type="text"
+            placeholder="How can we help?"
+            maxlength="150"
+            required
+            aria-describedby="subject-error"
+          >
+          <span class="field-error" id="subject-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Tell us a little about what you have in mind..."
+            maxlength="5000"
+            required
+            aria-describedby="message-error"
+          ></textarea>
+          <span class="field-error" id="message-error"></span>
+        </div>
+
+        <button class="submit-button" id="submit-button" type="submit">
+          <span>Send message</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Official EmailJS browser SDK. It is loaded before the form's JavaScript. -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
